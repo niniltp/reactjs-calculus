@@ -1,0 +1,29 @@
+{
+  "rules": [
+    {
+      "id": 0,
+      "type": 0,
+      "title": "+ (addition)"
+    },
+    {
+      "id": 1,
+      "type": 0,
+      "title": "- (substraction)"
+    },
+    {
+      "id": 2,
+      "type": 0,
+      "title": "x (multiplication)"
+    },
+    {
+      "id": 3,
+      "type": 0,
+      "title": "/ (division)"
+    },
+    {
+      "id": 4,
+      "type": 1,
+      "title": "same tens digit (for multiplication)"
+    }
+  ]
+}
