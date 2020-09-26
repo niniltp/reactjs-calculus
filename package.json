@@ -2,7 +2,7 @@
   "name": "calculus",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://niniltp.github.io/reactjs-calculus",
+  "homepage": "https://niniltp.github.io/reactjs-calculus",
   "dependencies": {
     "@material-ui/core": "^4.10.0",
     "@material-ui/icons": "^4.9.1",
