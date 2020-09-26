@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/reactjs-calculus/static/css/main.49e29d48.chunk.css",
+    "main.js": "/reactjs-calculus/static/js/main.e122b1e9.chunk.js",
+    "main.js.map": "/reactjs-calculus/static/js/main.e122b1e9.chunk.js.map",
+    "runtime-main.js": "/reactjs-calculus/static/js/runtime-main.40e57d93.js",
+    "runtime-main.js.map": "/reactjs-calculus/static/js/runtime-main.40e57d93.js.map",
+    "static/js/2.f4de6a0b.chunk.js": "/reactjs-calculus/static/js/2.f4de6a0b.chunk.js",
+    "static/js/2.f4de6a0b.chunk.js.map": "/reactjs-calculus/static/js/2.f4de6a0b.chunk.js.map",
+    "index.html": "/reactjs-calculus/index.html",
+    "precache-manifest.6cc003bb9d27ba2934aebcc061527685.js": "/reactjs-calculus/precache-manifest.6cc003bb9d27ba2934aebcc061527685.js",
+    "service-worker.js": "/reactjs-calculus/service-worker.js",
+    "static/css/main.49e29d48.chunk.css.map": "/reactjs-calculus/static/css/main.49e29d48.chunk.css.map",
+    "static/js/2.f4de6a0b.chunk.js.LICENSE.txt": "/reactjs-calculus/static/js/2.f4de6a0b.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/reactjs-calculus/static/media/logo.5d5d9eef.svg",
+    "static/media/sfx_right.wav": "/reactjs-calculus/static/media/sfx_right.0482e8d8.wav",
+    "static/media/sfx_swipe.wav": "/reactjs-calculus/static/media/sfx_swipe.805998a9.wav",
+    "static/media/sfx_wrong.wav": "/reactjs-calculus/static/media/sfx_wrong.2d714f36.wav"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.40e57d93.js",
+    "static/js/2.f4de6a0b.chunk.js",
+    "static/css/main.49e29d48.chunk.css",
+    "static/js/main.e122b1e9.chunk.js"
+  ]
+}
