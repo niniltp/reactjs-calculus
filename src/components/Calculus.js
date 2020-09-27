@@ -259,6 +259,7 @@ class Calculus extends Component {
                 this.incrementScoreRight().then(() => {
                     this.updatePrecision();
                     this.resetFieldResult();
+                    this.focusFieldResult();
                     this.loadNewCalculus();
                 });
             } else {
