@@ -63,7 +63,9 @@ class Calculus extends Component {
                 type: '',
                 message: ''
             }
-        }
+        };
+
+        this.fieldResult = React.createRef();
     }
 
     componentDidMount() {
@@ -79,7 +81,9 @@ class Calculus extends Component {
             })
         });
 
+
         this.loadNewCalculus();
+        // this.focusFieldResult();
     };
 
     processRules = async (rules) => {
@@ -185,7 +189,7 @@ class Calculus extends Component {
                 result = (members[0] / members[1]);
             }
         } else if (randSymbol === 'x' && this.hasRule(4)) {
-            console.log("Special rule tens digit")
+            console.log("Special rule tens digit");
             nbMaxMembers = this.state.nbMaxMembers;
             membersMin = this.state.membersMin;
             membersMax = Math.floor(this.state.membersMax / 10);
@@ -336,6 +340,10 @@ class Calculus extends Component {
 
     resetFieldResult = () => {
         this.setFieldResult("");
+    };
+
+    focusFieldResult = () => {
+        this.fieldResult.current.focus();
     };
 
     setFieldResult = (value) => {
@@ -632,7 +640,8 @@ class Calculus extends Component {
                                 <TextField id="filled-basic" variant="filled" type="number" autoFocus={true}
                                            value={this.state.fieldResult} onChange={this.handleChange}
                                            error={this.state.fieldError.state}
-                                           helperText={this.state.fieldError.state ? this.state.fieldError.message : ' '}/>
+                                           helperText={this.state.fieldError.state ? this.state.fieldError.message : ' '}
+                                           ref={this.fieldResult}/>
                             </Box>
                             {this.displayButtonsAction()}
                         </form>
