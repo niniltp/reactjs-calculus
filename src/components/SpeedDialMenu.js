@@ -1,5 +1,7 @@
 import React from 'react';
-import {makeStyles} from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
+import { useTheme } from '@material-ui/core/styles';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 import SpeedDial from '@material-ui/lab/SpeedDial';
 import SpeedDialIcon from '@material-ui/lab/SpeedDialIcon';
 import SpeedDialAction from '@material-ui/lab/SpeedDialAction';
@@ -8,16 +10,33 @@ import SettingsIcon from '@material-ui/icons/Settings';
 import AssignmentIcon from '@material-ui/icons/Assignment';
 
 const useStyles = makeStyles((theme) => ({
-    speedDial: {
+   /* speedDial: {
         position: 'absolute',
         bottom: theme.spacing(2),
         right: theme.spacing(2),
-    },
+    }*/
+    speedDial: {
+        position: 'absolute',
+        [theme.breakpoints.only('xs')]: {
+            top: theme.spacing(2),
+            right: theme.spacing(2),
+            direction: "left"
+        },
+        [theme.breakpoints.up('sm')]: {
+            bottom: theme.spacing(2),
+            right: theme.spacing(2),
+            direction: "up"
+        }
+    }
 }));
 
 export default function SpeedDialMenu(props) {
+    const theme = useTheme();
+    const screenIsSmall = useMediaQuery(theme.breakpoints.only('xs'));
     const classes = useStyles();
     const [open, setOpen] = React.useState(false);
+    const [direction, setDirection] = React.useState("up");
+
 
     const actions = [
         {icon: <HomeRoundedIcon />, name: 'Home'},
@@ -38,6 +57,10 @@ export default function SpeedDialMenu(props) {
         handleClose();
     };
 
+    React.useEffect(() => {
+        setDirection(screenIsSmall ? "left" : "up");
+    });
+
     return (
         <div>
             <SpeedDial
@@ -48,6 +71,7 @@ export default function SpeedDialMenu(props) {
                 onClose={handleClose}
                 onOpen={handleOpen}
                 open={open}
+                direction={direction}
             >
                 {actions.map((action) => (
                     <SpeedDialAction

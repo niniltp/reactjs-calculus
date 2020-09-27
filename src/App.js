@@ -19,7 +19,7 @@ const defaultSettings = {
 function Welcome() {
     return (
         <Box>
-            <Box>
+            <Box px={5}>
                 <Typography variant="h3" component="h2">
                     Welcome to Calculus
                 </Typography>
